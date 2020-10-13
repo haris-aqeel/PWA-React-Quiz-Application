@@ -6,9 +6,8 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import ForwardIcon from "@material-ui/icons/Forward";
 import Button from "@material-ui/core/Button";
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
 
-import service from './Services/service'
 
 const useStyles = makeStyles((theme) => ({
   TakeDataFromUser: {
@@ -49,36 +48,34 @@ const useStyles = makeStyles((theme) => ({
   },
   SubHeader: {
     fontSize: "18px",
-    padding: '6px'
+    padding: "6px",
   },
   form: {
-      textAlign: 'center'
-  }
+    textAlign: "center",
+  },
 }));
 
 const TakeData: React.FC = () => {
   const classes = useStyles();
 
- const history = useHistory();
+  const history = useHistory();
 
   const [Difficulty, setDifficulty] = useState<string>("");
   const [NumberOfQuestions, setNumberOfQuestions] = useState<string>("");
   const [Topic, setTopic] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-        history.push(
-            {path: '/Questions',
-            state: {
-                Difficulty,
-                NumberOfQuestions,
-                Topic
-            }}
-            )  
-    //service(Difficulty, NumberOfQuestions,Topic);
-    
-  }
-
+    e.preventDefault();
+    history.push({
+      pathname: "/QuestionList",
+      state: {
+        Difficulty,
+        NumberOfQuestions,
+        Topic,
+      },
+    });
+    // service(Difficulty, NumberOfQuestions,Topic);
+  };
 
   return (
     <div className={classes.TakeDataFromUser}>
@@ -151,12 +148,11 @@ const TakeData: React.FC = () => {
               >
                 <option aria-label="None" value="" />
                 <option value="multiple">Multiple</option>
-                
               </Select>
             </FormControl>
           </div>
           <Button
-            type='submit'
+            type="submit"
             variant="contained"
             color="secondary"
             className={classes.button}

@@ -2,11 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import QuestionList from './QuestionList'
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <App />
+        </Route>
+        <Route path='/QuestionList'>
+          <QuestionList />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
