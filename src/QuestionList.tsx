@@ -5,7 +5,7 @@ import service from './Services/service'
 import QuestionDisplay from './Question';
 
 const QuestionList = () => {
-    const [QuestionList, setQuestionList] = useState([])
+    
     const [Question, setQuestion] = useState<string>("");
     const [CorrectAnswer, setCorrectAnswer] = useState<string>("");
     const [Options, setOptions] = useState<string[]>([])
@@ -34,7 +34,7 @@ const QuestionList = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setCurrentStep(currentStep+1)
+        setCurrentStep(currentStep < +NumberOfQuestions-1 ?currentStep+1: currentStep)
     }
     
     
@@ -47,6 +47,7 @@ const QuestionList = () => {
                             .sort((a, b) => a.sort - b.sort)
                             .map((a) => a.value)}
                 answer = {CorrectAnswer}
+                number = {NumberOfQuestions}
             />
         </div>
     )
