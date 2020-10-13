@@ -30,4 +30,15 @@ export type displayQuestionType = {
     options: string[];
     callback: (event: React.FormEvent<HTMLFormElement>) => void;
     answer: string
+    number : string;
+}
+
+
+export type calculateScore = {
+    amount: number;
+    score: number
+}
+
+export type locationScore = {
+    state: calculateScore
 }
