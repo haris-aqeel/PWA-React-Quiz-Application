@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import QuestionList from './QuestionList'
+import Result from './Result';
 
 ReactDOM.render(
 
@@ -15,6 +16,9 @@ ReactDOM.render(
         </Route>
         <Route path='/QuestionList'>
           <QuestionList />
+        </Route>
+        <Route path='/result'>
+          <Result />
         </Route>
       </Switch>
     </Router>
