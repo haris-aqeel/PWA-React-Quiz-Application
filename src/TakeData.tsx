@@ -74,7 +74,7 @@ const TakeData: React.FC = () => {
         Topic,
       },
     });
-    // service(Difficulty, NumberOfQuestions,Topic);
+
   };
 
   return (
@@ -91,6 +91,7 @@ const TakeData: React.FC = () => {
               <Select
                 native
                 value={Difficulty}
+                required
                 onChange={(event) => setDifficulty(`${event.target.value}`)}
                 label="Difficult"
                 inputProps={{
@@ -114,6 +115,7 @@ const TakeData: React.FC = () => {
               <Select
                 native
                 value={NumberOfQuestions}
+                required
                 onChange={(event) =>
                   setNumberOfQuestions(`${event.target.value}`)
                 }
@@ -138,6 +140,7 @@ const TakeData: React.FC = () => {
               </InputLabel>
               <Select
                 native
+                required
                 value={Topic}
                 onChange={(event) => setTopic(`${event.target.value}`)}
                 label="Topic"
