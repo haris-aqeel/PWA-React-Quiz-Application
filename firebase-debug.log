@@ -1,0 +1,13 @@
+[debug] [2020-10-14T09:05:14.503Z] ----------------------------------------------------------------------
+[debug] [2020-10-14T09:05:14.505Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\umer pc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-10-14T09:05:14.505Z] CLI Version:   8.12.1
+[debug] [2020-10-14T09:05:14.505Z] Platform:      win32
+[debug] [2020-10-14T09:05:14.506Z] Node Version:  v12.18.3
+[debug] [2020-10-14T09:05:14.507Z] Time:          Wed Oct 14 2020 14:05:14 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-10-14T09:05:14.507Z] ----------------------------------------------------------------------
+[debug] [2020-10-14T09:05:14.507Z] 
+[debug] [2020-10-14T09:05:14.514Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-14T09:05:14.515Z] > authorizing via signed-in user
+[debug] [2020-10-14T09:05:14.515Z] [iam] checking project pwa-quiz-application for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-14T09:05:14.518Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pwa-quiz-application:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
